@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProductService } from 'src/app/services/product.service';
+import { IAlbum } from 'src/app/services/album';
+
 @Component({
   selector: 'app-product-description',
   templateUrl: './product-description.component.html',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  constructor() { }
+  albumInfo: IAlbum | undefined;
+  errorMessage: '';
+  constructor(private productService: ProductService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.productService.getAlbum(1).subscribe({
+      next: albumInfo => this.albumInfo = albumInfo,
+      error: err=> this.errorMessage = err 
+    })
   }
 
 }
