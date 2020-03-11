@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(
       [{path:'welcome', component:ProductPageComponent},
       {path:'albums', component: ProductDescriptionComponent},
-    {path:'', redirectTo: 'welcome', pathMatch:'full'}])
+      {path:'albums/:id', component: ProductDescriptionComponent},
+      {path:'', redirectTo: 'welcome', pathMatch:'full'}])
   ],
   providers: [],
   bootstrap: [AppComponent]

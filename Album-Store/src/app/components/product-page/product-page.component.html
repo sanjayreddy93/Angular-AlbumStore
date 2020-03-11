@@ -8,17 +8,21 @@
     <div class="container-fluid">
         <div class="card-body">
             <table class="table table-inverse">
-                <tr>
+                <tr >
+                    <th>Album Image</th>
                     <th>Artist Name</th>
                     <th>Album Name</th>
                     <th>Number of tracks</th>
                     <th>Release Date</th>
                 </tr>
-                <tr>
-                    <td> {{this.albumInfo?.artist}}</td>
-                    <td>{{this.albumInfo?.album?.name}}</td>
-                    <td>{{albumInfo?.album?.tracks.length}}</td>
-                    <td>{{albumInfo?.album?.releaseDate}}</td>
+                <tr *ngFor = "let album of albums">
+                    <td> <img src={{this.album?.album?.coverImage}} alt="product image" style="height: 50px;width: 75px;"/></td>
+                    <td> {{this.album?.artist}}</td>
+                    <td>{{this.album?.album?.name}}</td>
+                    <td style="text-align: center;">{{album?.album?.tracks.length}}</td>
+                    <td>{{album?.album?.releaseDate}}</td>
+                    <td><i class="fa fa-eye" 
+                        [routerLink]="['/albums', album.id]"></i></td>
                 </tr>
             </table>
 

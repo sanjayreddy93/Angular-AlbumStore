@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ProductService } from 'src/app/services/product.service';
 import { IAlbum } from 'src/app/services/album';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-description',
@@ -9,16 +10,34 @@ import { IAlbum } from 'src/app/services/album';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-
-  albumInfo: IAlbum | undefined;
+  pageTitle: string = "Album Details"
+  public albumDetails: IAlbum | undefined;
   errorMessage: '';
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
-    this.productService.getAlbum(1).subscribe({
-      next: albumInfo => this.albumInfo = albumInfo,
-      error: err=> this.errorMessage = err 
-    })
+    const param = +this.activatedRoute.snapshot.paramMap.get('id');
+    if (param) {
+      const id = +param;
+      this.getAlbumDetails(id);
+    }
   }
 
+  getAlbumDetails(id: number) {
+  
+    this.productService.getAlbum(id).subscribe(
+      data => {
+        this.albumDetails = data
+      },
+      err => console.log(err)
+    )
+  }
+
+  onBack(): void {
+    this.router.navigate(['./albums']);
+  }
 }
+
+

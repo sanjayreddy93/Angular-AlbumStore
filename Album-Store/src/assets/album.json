@@ -1,4 +1,5 @@
-{
+[
+  {
   "id": 1,
   "artist": "The Prependers",
   "album": {
@@ -7,14 +8,67 @@
     "coverImage": "assets/opacity-zero.jpg",
     "tracks": [
       {"trackNumber": 1, "trackName": "The Last", "trackLength": "4:48", "trackPrice": 0.99 },
-      {"trackNumber": 2, "trackName": "Downtown", "trackLength": "3:13", "trackPrice": 0.99 },
+      {"trackNumber": 2, "trackName": "Downtown", "trackLength": "3:13", "trackPrice": 1.00 },
       {"trackNumber": 3, "trackName": "Yellow Carpet", "trackLength": "3:42", "trackPrice": 0.99 },
       {"trackNumber": 4, "trackName": "Rocket to Mars", "trackLength": "4:31", "trackPrice": 0.99 },
-      {"trackNumber": 5, "trackName": "Walk, not Run", "trackLength": "2:53", "trackPrice": 0.99 },
+      {"trackNumber": 5, "trackName": "Walk, not Run", "trackLength": "2:53", "trackPrice": 1.99 },
       {"trackNumber": 6, "trackName": "Design", "trackLength": "5:12", "trackPrice": 0.99 },
       {"trackNumber": 7, "trackName": "Shopping Cart", "trackLength": "9:07", "trackPrice": 0.99 },
-      {"trackNumber": 8, "trackName": "Our Gift to You", "trackLength": "3:59", "trackPrice": 0.99 }
+      {"trackNumber": 8, "trackName": "Our Gift to You", "trackLength": "3:59", "trackPrice": 1.99 }
+    ]
+  }
+
+},
+{
+  "id": 2,
+  "artist": "Camilla Cabello",
+  "album": {
+    "name": "Fanny Magnet",
+    "releaseDate": "December 10, 2017",
+    "coverImage": "assets/opacity-zero.jpg",
+    "tracks": [
+      {"trackNumber": 1, "trackName": "Liar", "trackLength": "4:48", "trackPrice": 1.99 },
+      {"trackNumber": 2, "trackName": "Havana", "trackLength": "3:13", "trackPrice": 2.99 },
+      {"trackNumber": 3, "trackName": "Senorita", "trackLength": "3:42", "trackPrice": 1.99 },
+      {"trackNumber": 4, "trackName": "My oh my", "trackLength": "4:31", "trackPrice": 0.99 }
+
+    ]
+  }
+
+},
+{
+  "id": 3,
+  "artist": "Abel Makkonen Tesfaye",
+  "album": {
+    "name": "The Weekend",
+    "releaseDate": "March 13, 2017",
+    "coverImage": "assets/opacity-zero.jpg",
+    "tracks": [
+      {"trackNumber": 1, "trackName": "Blinding Lights", "trackLength": "4:48", "trackPrice": 2.99 },
+      {"trackNumber": 2, "trackName": "Heartless", "trackLength": "3:13", "trackPrice": 0.99 },
+      {"trackNumber": 3, "trackName": "Starboy", "trackLength": "3:42", "trackPrice": 1.00 },
+      {"trackNumber": 4, "trackName": "Cant feel my face", "trackLength": "4:31", "trackPrice": 0.99 }
+
+    ]
+  }
+
+},
+{
+  "id": 4,
+  "artist": "Charlie Puth",
+  "album": {
+    "name": "Leave me alone",
+    "releaseDate": "July 29, 2018",
+    "coverImage": "assets/opacity-zero.jpg",
+    "tracks": [
+      {"trackNumber": 1, "trackName": "We don't talk anymore", "trackLength": "4:48", "trackPrice": 2.99 },
+      {"trackNumber": 2, "trackName": "Attention", "trackLength": "3:13", "trackPrice": 0.99 },
+      {"trackNumber": 3, "trackName": "How long", "trackLength": "3:42", "trackPrice": 1.00 },
+      {"trackNumber": 4, "trackName": "I warned myself", "trackLength": "4:31", "trackPrice": 0.99 },
+      {"trackNumber": 5, "trackName": "Hotline Bling", "trackLength": "4:31", "trackPrice": 0.99 }
+
     ]
   }
 
 }
+]

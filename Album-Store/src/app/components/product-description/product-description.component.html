@@ -1,10 +1,53 @@
-<div class="row description">
-  <div class="col-sm-2">
-    <img src="assets/opacity-zero.jpg" alt="product image" />
+<div class="card" style="width: 75%;margin: 0 auto;">
+  <div class="card-header">
+    <nav class="navbar">
+      <a class="navbrand-bar h4">{{pageTitle  + ' : ' + this.albumDetails?.album?.name}}</a>
+    </nav>
   </div>
-  <div class="col-sm-6">
-    <p class="album-name">Opacity Zero</p>
-    <p class="band-name">The Prependers</p>
-    <p class="album-release-date">September 25, 2014</p>
+
+  <div class="container-fluid">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm 4">
+          <img src="{{this.albumDetails?.album?.coverImage}}" alt="Album cover" style="width: 250px;height:250px;" />
+          <div> Singer : <h6>{{this.albumDetails?.artist}}</h6>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="card">
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+              <a> <strong>Tracks </strong></a>
+
+              <form class="form-inline">
+                
+                <i class="fa fa-plus-square"> Add New</i>
+              </form>
+            </nav>
+          
+        
+          </div>
+          <table class="table table-inverse">
+            <tr>
+              <th>Track Number</th>
+              <th>Track Name</th>
+              <th>Track Length</th>
+              <th> Track Price</th>
+            </tr>
+
+            <tr *ngFor="let track of this.albumDetails?.album?.tracks">
+              <td>{{track.trackNumber}}</td>
+              <td>{{track.trackName}}</td>
+              <td>{{track.trackLength}}</td>
+              <td>{{track.trackPrice | currency: 'EUR'}}</td>
+              <td><i class="fa fa-edit"></i></td>
+              <td><i class="fa fa-trash"></i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div>
+
 </div>
