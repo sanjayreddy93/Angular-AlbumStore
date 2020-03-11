@@ -12,16 +12,18 @@ import { IAlbum } from 'src/app/services/album';
 })
 export class ProductPageComponent implements OnInit {
   pageTitle: string = "List of Albums"
-  albums: IAlbum[] =[];
+  albumInfo: IAlbum[] = [];
   errorMessage: '';
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.getAlbumDetails();
+  }
+  getAlbumDetails(): any{
     this.productService.getAlbums().subscribe({
-      next: albums => {this.albums = albums
+      next: data => {this.albumInfo = data
       },
       error: err=> this.errorMessage = err
     })
   }
-
 }

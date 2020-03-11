@@ -6,6 +6,7 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     RouterModule.forRoot(
       [{path:'welcome', component:ProductPageComponent},
-    {path:'albums', component: ProductDescriptionComponent}])
+      {path:'albums', component: ProductDescriptionComponent},
+    {path:'', redirectTo: 'welcome', pathMatch:'full'}])
   ],
   providers: [],
   bootstrap: [AppComponent]

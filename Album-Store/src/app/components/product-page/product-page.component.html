@@ -5,22 +5,23 @@
         </nav>
 
     </div>
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="row tracklisting">
-                <ul>
-                    <li>
-                        <div class="col-sm-5">
-                            <span class="track-number">{{albums.artist}}</span>
-                            <span class="track-name">{{albums?.album?.name}}</span>
-                        </div>
-                        <div class="col-sm-3 text-right">
-                            <span class="track-time">4:48</span>
-                            <span class="price-and-buy"><button>$0.99</button></span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div class="container-fluid">
+        <div class="card-body">
+            <table class="table table-inverse">
+                <tr>
+                    <th>Artist Name</th>
+                    <th>Album Name</th>
+                    <th>Number of tracks</th>
+                    <th>Release Date</th>
+                </tr>
+                <tr>
+                    <td> {{this.albumInfo?.artist}}</td>
+                    <td>{{this.albumInfo?.album?.name}}</td>
+                    <td>{{albumInfo?.album?.tracks.length}}</td>
+                    <td>{{albumInfo?.album?.releaseDate}}</td>
+                </tr>
+            </table>
+
         </div>
     </div>
 </div>

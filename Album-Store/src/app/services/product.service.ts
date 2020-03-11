@@ -10,7 +10,7 @@ export class ProductService {
   private albumUrl: string = "assets/album.json";
   constructor(private http: HttpClient) { }
 
-  getAlbums(): Observable<IAlbum[]>{
+  getAlbums(): Observable<IAlbum[] | undefined>{
    return this.http.get<IAlbum[]>(this.albumUrl).pipe(
       tap(), catchError(this.handleError)
         );
