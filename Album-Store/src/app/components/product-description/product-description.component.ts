@@ -38,6 +38,9 @@ export class ProductDescriptionComponent implements OnInit {
   deleteTrack(track){
     console.log("Hardcoded Json data of "+ track.trackNumber +' '+track.trackName +" cannot be deleted")
   }
+  editTrack(track): void{
+    console.log("Hardcoded Json data of "+ track.trackNumber +' '+track.trackName +" cannot be edited")
+  }
 
   onBack(): void {
     this.router.navigate(['./albums']);
