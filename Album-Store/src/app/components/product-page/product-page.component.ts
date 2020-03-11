@@ -24,4 +24,8 @@ export class ProductPageComponent implements OnInit {
       error: err=> this.errorMessage = err
     })
   }
+
+  deleteAlbum(id :number) : void{
+    console.log("Delete feature can't be added to hardcoded json");
+  }
 }

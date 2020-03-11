@@ -41,7 +41,7 @@
               <td>{{track.trackLength}}</td>
               <td>{{track.trackPrice | currency: 'EUR'}}</td>
               <td><i class="fa fa-edit"></i></td>
-              <td><i class="fa fa-trash"></i></td>
+              <td><i class="fa fa-trash" (click) = "deleteTrack(track)"></i></td>
             </tr>
           </table>
         </div>

@@ -23,6 +23,8 @@
                     <td>{{album?.album?.releaseDate}}</td>
                     <td><i class="fa fa-eye" 
                         [routerLink]="['/albums', album.id]"></i></td>
+                        <td><i class="fa fa-trash" 
+                            (click)= "deleteAlbum(album.id)"></i></td>
                 </tr>
             </table>
 
