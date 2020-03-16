@@ -20,12 +20,12 @@
               <a> <strong>Tracks </strong></a>
 
               <form class="form-inline">
-                
+
                 <i class="fa fa-plus-square"> Add New</i>
               </form>
             </nav>
-          
-        
+
+
           </div>
           <table class="table table-inverse">
             <tr>
@@ -41,7 +41,7 @@
               <td>{{track.trackLength}}</td>
               <td>{{track.trackPrice | currency: 'EUR'}}</td>
               <td><i class="fa fa-edit" (click)="editTrack(track)"></i></td>
-              <td><i class="fa fa-trash" (click) = "deleteTrack(track)"></i></td>
+              <td><i class="fa fa-trash" (click)="deleteTrack(track)"></i></td>
             </tr>
           </table>
         </div>
